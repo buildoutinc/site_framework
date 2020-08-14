@@ -16,7 +16,7 @@ module SiteFramework
 
       embedded_in :site
 
-      index({ name: 1 }, { unique: true, background: true })
+      index({ name: 1 }, { unique: { case_sensitive: false }, background: true })
 
       def parent
         # TODO: return a domain with alias == false

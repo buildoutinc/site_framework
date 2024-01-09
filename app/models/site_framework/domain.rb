@@ -32,9 +32,7 @@ module SiteFramework
     end
 
     validates :name, presence: true, if: :valid_domain_name?
-
-
-    validates_uniqueness_of :name
+    validates_uniqueness_of :name, case_sensitive: false
 
     before_save :normalize_name
 
